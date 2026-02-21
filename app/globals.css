@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Define custom theme variables if needed, or just use standard CSS variables */
+@theme {
+  --color-primary: #2563eb; /* Blue 600 */
+}
+
+/* In Tailwind v4, we use standard CSS variables for the root.
+  Slate 950 = #020617
+  Slate 50 = #f8fafc
+*/
+:root {
+  --background: #020617; 
+  --foreground: #f8fafc;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* For custom utility classes in v4, you can just write standard CSS 
+   and use @apply. If 'slate' isn't found, we use the hex codes directly 
+   or ensure the color palette is active.
+*/
+@layer utilities {
+  .glass {
+    /* Using specific colors helps avoid theme missing errors in strict modes */
+    @apply bg-slate-900/40 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-hover {
+    @apply hover:bg-slate-800/60 transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400;
+  }
+}
