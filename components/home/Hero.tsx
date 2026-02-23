@@ -3,8 +3,12 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { BookingModal } from "../ui/BookingModel";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   return (
     <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-20">
       {/* Background Glow */}
@@ -30,7 +34,7 @@ export default function Hero() {
           </p>
           
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button className="h-12 px-8 text-lg">Book Now</Button>
+            <Button className="h-12 px-8 text-lg" onClick={() => setShowModal(true)}>Book Now</Button>
             <Link href="/services">
               <Button variant="outline" className="h-12 px-8 text-lg group">
                 View Packages <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -39,6 +43,7 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+      <BookingModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 }
