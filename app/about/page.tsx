@@ -9,14 +9,23 @@ export default function AboutPage() {
           <div className="flex-1">
             <h1 className="text-4xl font-bold mb-6">Our Story</h1>
             <p className="text-slate-400 mb-4 leading-relaxed">
-              Founded in 2024, Mr.Kleen Auto Spa began with a simple mission: to provide a car care experience that matches the precision and passion of automotive enthusiasts. 
+              At Mr.Kleen Auto Spa, we believe your vehicle is more than just a way to get from A to B—it’s an investment and a reflection of you. Since opening our doors in 2017, we’ve dedicated ourselves to the art of the shine.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              We aren't just a car wash; we are preservationists. Using only pH-neutral soaps, microfiber technology, and filtered water, we ensure your vehicle leaves our care looking better than the day you bought it.
+              We aren't your typical "in-and-out" wash. By combining cutting-edge technology with a meticulous, spa-like touch, we ensure every curve and corner of your car receives the attention it deserves. From daily drivers to luxury imports, we treat every vehicle that enters our bay as if it were our own. 
             </p>
           </div>
           <div className="flex-1 h-[300px] w-full glass rounded-2xl border border-white/10 flex items-center justify-center">
-             <span className="text-slate-600 font-mono"></span>
+             {/*<span className="text-slate-600 font-mono"></span>*/}
+             <div className="flex-1 relative h-[300px] md:h-[350px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20">
+            <Image 
+              src="/about-image.png" 
+              alt="Mr.Kleen team detailing a luxury car" 
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700"
+              priority
+            />
+          </div>
           </div>
         </div>
 
