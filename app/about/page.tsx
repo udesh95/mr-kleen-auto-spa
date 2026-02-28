@@ -12,7 +12,7 @@ export default function AboutPage() {
               At Mr.Kleen Auto Spa, we believe your vehicle is more than just a way to get from A to B—it’s an investment and a reflection of you. Since opening our doors in 2017, we’ve dedicated ourselves to the art of the shine.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              We aren't your typical "in-and-out" wash. By combining cutting-edge technology with a meticulous, spa-like touch, we ensure every curve and corner of your car receives the attention it deserves. From daily drivers to luxury imports, we treat every vehicle that enters our bay as if it were our own. 
+              We are not your typical "in-and-out" wash. By combining cutting-edge technology with a meticulous, spa-like touch, we ensure every curve and corner of your car receives the attention it deserves. From daily drivers to luxury imports, we treat every vehicle that enters our bay as if it were our own. 
             </p>
           </div>
           <div className="flex-1 h-[300px] w-full glass rounded-2xl border border-white/10 flex items-center justify-center">
